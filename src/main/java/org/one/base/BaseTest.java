@@ -45,8 +45,8 @@ public class BaseTest {
     @BeforeTest (alwaysRun = true)
     @Parameters ("platform")
     public void beforeTest (String platform) {
-        if (platform.equalsIgnoreCase (PlatformName.IOS.name ()) || platform.equalsIgnoreCase (PlatformName
-                .ANDROID.name ())) {
+        if (platform.equalsIgnoreCase (PlatformName.IOS.name ()) || platform.equalsIgnoreCase (
+                PlatformName.ANDROID.name ())) {
             this.service = AppiumServiceManager.composeService ()
                     .composed ()
                     .buildService ();
@@ -89,8 +89,8 @@ public class BaseTest {
     @Parameters ("platform")
     public void afterTest (String platform) {
         driver.quit ();
-        if (platform.equalsIgnoreCase (PlatformName.IOS.name ()) || platform.equalsIgnoreCase (PlatformName
-                .ANDROID.name ())) {
+        if (platform.equalsIgnoreCase (PlatformName.IOS.name ()) || platform.equalsIgnoreCase (
+                PlatformName.ANDROID.name ())) {
             this.service.stop ();
         }
     }
