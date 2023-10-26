@@ -40,13 +40,13 @@ public class DriverManager {
                     .getDriver();
         } else if (System.getProperty("platformName").equalsIgnoreCase(PlatformName.CHROME.name())) {
             driver = WebDriverBuilder.createDriver ()
-                    .platformName (platformType)
+                    .browserName (platformType)
                     .isHeadless (isHeadless)
                     .create ()
                     .getDriver ();
         } else if (System.getProperty("platformName").equalsIgnoreCase(PlatformName.FIREFOX.name())) {
             driver = WebDriverBuilder.createDriver ()
-                    .platformName (platformType)
+                    .browserName (platformType)
                     .isHeadless (isHeadless)
                     .create ()
                     .getDriver ();
