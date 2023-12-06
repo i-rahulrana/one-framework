@@ -15,8 +15,10 @@
   ~ copies or substantial portions of the Software.
   -->
 
-<Configuration status="warn" name="Boyka-Logs">
+<Configuration status="warn" name="One-Logs">
     <Properties>
         <Property name="log-path">logs</Property>
-        <Property name="error-log">boyka-log-error</Property>
-        <Property name="all-log">boyka-log-all</Pr
+        <Property name="error-log">one-log-error</Property>
+        <Property name="all-log">one-log-all</Property>
+    </Properties>
+</Configuration>

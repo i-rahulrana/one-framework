@@ -36,7 +36,7 @@ public class JsonUtilTest {
      */
     @Test (expectedExceptions = FrameworkError.class)
     public void testFromFile () {
-        final var configPath = Path.of (getProperty ("user.dir"), "boyka-config.json")
+        final var configPath = Path.of (getProperty ("user.dir"), "one-config.json")
             .toString ();
         JsonUtil.fromFile (configPath, FrameworkSetting.class);
     }
