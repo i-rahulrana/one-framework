@@ -69,9 +69,9 @@ public final class SettingUtils {
         if (frameworkSetting == null) {
             final var defaultPath = Path.of (getProperty ("user.dir"), "src/test/resources")
                 .toString ();
-            final var configDirectory = ofNullable (getenv ("BOYKA_CONFIG_PATH")).orElse (
-                ofNullable (getProperty ("boyka.config.path")).orElse (defaultPath));
-            final var configPath = Path.of (configDirectory, "boyka-config.json")
+            final var configDirectory = ofNullable (getenv ("ONE_CONFIG_PATH")).orElse (
+                ofNullable (getProperty ("one.config.path")).orElse (defaultPath));
+            final var configPath = Path.of (configDirectory, "one-config.json")
                 .toString ();
             frameworkSetting = JsonUtil.fromFile (configPath, FrameworkSetting.class);
         }

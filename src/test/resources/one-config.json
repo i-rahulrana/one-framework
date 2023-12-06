@@ -1,5 +1,5 @@
 {
-  "listeners_package": "com.github.wasiqb.boyka.testng.listeners",
+  "listeners_package": "com.github.one.testng.listeners",
   "ui": {
     "timeout": {
       "implicit_wait": 10,
