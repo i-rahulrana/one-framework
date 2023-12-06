@@ -9,6 +9,7 @@ import static org.apache.logging.log4j.LogManager.getLogger;
 
 import java.net.MalformedURLException;
 import java.net.URL;
+import java.util.HashMap;
 import java.util.Map;
 
 import com.github.one.actions.drivers.NavigateActions;
@@ -153,14 +154,21 @@ class WebDriverManager implements IDriverManager {
 
     private <T extends ChromiumOptions<T>> void setCommonBrowserOptions (final T options, final WebSetting webSetting) {
         ofNullable (webSetting.getPlatform ()).ifPresent (options::setPlatformName);
-        options.addArguments ("enable-automation");
+        options.setExperimentalOption("excludeSwitches", new String[]{"enable-automation"});
         options.addArguments ("--no-sandbox");
         options.addArguments ("--disable-gpu");
         options.addArguments ("--disable-dev-shm-usage");
+        options.setExperimentalOption ("prefs", getChromiumPreference ());
         ofNullable (webSetting.getBrowserOptions ()).ifPresent (l -> l.forEach (options::addArguments));
         if (webSetting.isHeadless ()) {
             options.addArguments (HEADLESS);
         }
+    }
+
+    private Map<String, Object> getChromiumPreference() {
+        Map<String, Object> chromePreference = new HashMap<> ();
+        chromePreference.put ("credentials_enable_service", false);
+        return  chromePreference;
     }
 
     private void setDriverSize (final WebSetting webSetting) {
