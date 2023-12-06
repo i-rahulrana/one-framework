@@ -1,32 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration>
-	<Properties>
-		<Property name="basePath">./logs</Property>
-		<Property name="logName">sew</Property>
-	</Properties>
-	<Appenders>
-		<RollingFile name="File" fileName="${basePath}/${logName}.log"
-			filePattern="${basePath}/${logName}-%d{yyy-MM-dd}.log">
-			<PatternLayout
-				pattern="%d{HH:mm:ss.SSS} %-5level %c{2} (%13F:%L) - %msg%n" />
-			<Policies>
-				<TimeBasedTriggeringPolicy interval="1"
-					modulate="true" />
-				<SizeBasedTriggeringPolicy size="100 KB" />
-			</Policies>
-		</RollingFile>
-		<Console name="Console">
-			<PatternLayout
-				pattern="%d{HH:mm:ss.SSS} %-5level %c{2} (%13F:%L) - %msg%n" />
-		</Console>
-	</Appenders>
-	<Loggers>
-		<Root level="info">
-			<AppenderRef ref="Console" />
-			<AppenderRef ref="File" />
-		</Root>
-		<Logger name="pageobjects" level="info" additivity="false">
-			<AppenderRef ref="File" />
-		</Logger>
-	</Loggers>
-</Configuration>
+<!--
+  ~ MIT License
+  ~
+  ~ Copyright (c) 2023, Rahul Rana
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy
+  ~ of this software and associated documentation files (the "Software"), to deal
+  ~ in the Software without restriction, including without limitation the rights
+  ~ to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+  ~ copies of the Software, and to permit persons to whom the Software is
+  ~ furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all
+  ~ copies or substantial portions of the Software.
+  -->
+
+<Configuration status="warn" name="Boyka-Logs">
+    <Properties>
+        <Property name="log-path">logs</Property>
+        <Property name="error-log">boyka-log-error</Property>
+        <Property name="all-log">boyka-log-all</Pr
