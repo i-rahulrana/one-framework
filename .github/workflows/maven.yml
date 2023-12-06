@@ -27,6 +27,12 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Install Chrome
+      run: sudo apt update
+           sudo apt upgrade
+           sudo apt install wget
+           wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+           sudo dpkg -i google-chrome-stable_current_amd64.deb
     - name: Build with Maven
       run: mvn -B package --file pom.xml
 
