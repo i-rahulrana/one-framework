@@ -25,7 +25,7 @@
         "browser": "CHROME",
         "highlight": true,
         "headless": false,
-        "resize": "CUSTOM",
+        "resize": "MAXIMIZED",
         "custom_size": {
           "width": 1580,
           "height": 1080
