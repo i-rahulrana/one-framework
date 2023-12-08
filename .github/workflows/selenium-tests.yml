@@ -52,7 +52,18 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
+      - name: Install Allure
+        run: |
+          sudo apt-add-repository -y ppa:qameta/allure
+          sudo apt-get update
+          sudo apt-get install allure
+
       - name: Generate Allure Report
         run: |
-          allure generate --clean
-          allure open
+          allure generate allure-results --clean -o build/allure-report
+
+      - name: Upload Allure Report
+        uses: actions/upload-artifact@v2
+        with:
+          name: allure-report
+          path: build/allure-report
