@@ -24,7 +24,7 @@
         "base_url": "https://the-internet.herokuapp.com/",
         "browser": "CHROME",
         "highlight": true,
-        "headless": true,
+        "headless": false,
         "resize": "MAXIMIZED",
         "custom_size": {
           "width": 1580,
