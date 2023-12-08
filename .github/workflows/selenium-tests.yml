@@ -52,11 +52,13 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Install allure
+      - name: Install Allure
         run: |
-          npm install -g allure-commandline
+          sudo apt-add-repository -y ppa:qameta/allure
+          sudo apt-get update
+          sudo apt-get install allure
 
       - name: Generate Allure Report
         run: |
-          npx allure-commandline generate --clean
-          npx allure-commandline open
+          allure generate --clean
+          allure open
