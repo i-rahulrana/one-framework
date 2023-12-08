@@ -52,11 +52,6 @@ jobs:
           distribution: 'adopt'
           java-version: '17'
 
-      - name: Install node
-        run: |
-          pkg install node
-          cd /usr/ports/www/node && make install
-
       - name: Install allure
         run: |
           npm install -g allure-commandline
