@@ -55,7 +55,7 @@ jobs:
       - name: Download allure .deb package and install it.
         run: |
           sudo wget https://github.com/allure-framework/allure2/releases/download/2.18.1/allure_2.18.1-1_all.deb
-          sudo dpkg -i allure_2
+          sudo dpkg -i allure_2.18.1-1_all.deb
 
       - name: Generate Allure Report
         run: |
