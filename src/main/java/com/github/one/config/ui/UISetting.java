@@ -49,7 +49,7 @@ public class UISetting {
     /**
      * Gets the web setting.
      *
-     * @param key the config key for Web
+     * @param key the config key for Web 
      *
      * @return the {@link WebSetting}
      */

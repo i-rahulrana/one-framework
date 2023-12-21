@@ -16,7 +16,6 @@
 
 package com.github.one.manager;
 
-import static com.github.one.utils.StringUtils.interpolate;
 import static java.lang.System.getProperty;
 import static java.text.MessageFormat.format;
 import static org.apache.commons.lang3.StringUtils.isNotEmpty;
