@@ -16,8 +16,6 @@
 
 package com.github.one.config.ui.web;
 
-import static com.github.one.utils.StringUtils.interpolate;
-
 import java.util.List;
 import java.util.Map;
 
